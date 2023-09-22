@@ -8,7 +8,7 @@ import Header from './components/Header'
 function App() {
   return (
     <BrowserRouter>
-      <div className='font-montserrat p-5 bg-background-950'>
+      <div className='font-montserrat bg-background-950'>
         <Header />
       </div>
     </BrowserRouter>

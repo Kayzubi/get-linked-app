@@ -86,6 +86,7 @@ module.exports = {
     fontFamily: {
       clash: ['Clash Display', 'sans-serif'],
       montserrat: ['Montserrat', 'sans-serif'],
+      unica: ['Unica one', 'cursive'],
     },
     extend: {},
   },
