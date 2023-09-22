@@ -114,7 +114,7 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2, delay: 2 }}
-              className='  bg-gradient-to-r from-secondary-500 to-primary-500 py-2 md:py-5 px-5 rounded-sm outline-none w-52 text-white-100 text-lg '>
+              className='  bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-5 px-5 rounded-sm outline-none w-40 text-white-100 text-lg '>
               Register
             </motion.button>
             <motion.div
@@ -151,12 +151,12 @@ const Header = () => {
           <img
             src={images.flare}
             alt=''
-            className=' absolute top-[-100px] left-[-50px] opacity-[0.45]'
+            className=' absolute top-[-50px] lg:top-[-250px] left-[-50px] lg:left-[-150px] opacity-[0.35]'
           />
           <img
             src={images.flare}
             alt=''
-            className=' absolute hidden md:block bottom-0 right-[-200px] z-10 bg-blend-hard-light opacity-[0.45]'
+            className=' absolute hidden md:block bottom-0 right-[-200px] z-10 bg-blend-hard-light opacity-[0.35]'
           />
 
           <motion.div

@@ -14,6 +14,7 @@ module.exports = {
     colors: {
       white: {
         10: '#FFFFFF2E',
+        20: '#efefef',
         100: '#ffffff',
       },
       primary: {
@@ -42,6 +43,20 @@ module.exports = {
         900: '#6f127d',
         950: '#490055',
       },
+      tertiary: {
+        50: '#fef1fa',
+        100: '#fee5f8',
+        200: '#ffcaf3',
+        300: '#ff9fe7',
+        400: '#ff63d4',
+        500: '#ff26b9',
+        600: '#f0129e',
+        700: '#d1057f',
+        800: '#ad0768',
+        900: '#8f0c59',
+        950: '#580032',
+      },
+
       background: {
         50: '#eeeeff',
         100: '#e0e1ff',

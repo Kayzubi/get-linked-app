@@ -5,6 +5,7 @@ import chain from './chain.png'
 import blast from './blast.svg'
 import creative from './Creative 1.png'
 import flare from './Purple-Lens-Flare-PNG.png'
+import plus from './plus.svg'
 
 export const images = {
   man,
@@ -14,4 +15,5 @@ export const images = {
   creative,
   blast,
   flare,
+  plus,
 }

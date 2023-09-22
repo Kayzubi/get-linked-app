@@ -29,7 +29,7 @@ const Navbar = () => {
         </ul>
         <button
           type='button'
-          className=' hidden md:block bg-gradient-to-r from-secondary-500 to-primary-500 py-2 text-white px-5 rounded-sm outline-none '>
+          className=' hidden md:block bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 text-white px-5 rounded-sm outline-none '>
           Register
         </button>
         <button
@@ -44,7 +44,7 @@ const Navbar = () => {
             initial={{ opacity: 0, scale: 0.3 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.3 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className=' h-screen bg-background-950 w-screen fixed flex flex-col justify-center items-start gap-10 left-0 top-0 px-10  text-white-100 md:hidden'>
             <button
               onClick={() => setnavOpen(false)}
@@ -69,7 +69,7 @@ const Navbar = () => {
             </ul>
             <button
               type='button'
-              className=' bg-gradient-to-r from-secondary-500 to-primary-500 py-5 text-white px-5 rounded-sm outline-none w-52  '>
+              className=' bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-5 text-white px-5 rounded-sm outline-none w-52  '>
               Register
             </button>
           </motion.div>
