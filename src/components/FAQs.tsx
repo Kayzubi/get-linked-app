@@ -1,7 +1,7 @@
 import React from 'react'
 import thinking from '../assets/man thinking.png'
 import { motion, AnimatePresence } from 'framer-motion'
-import Accordian from './Accordian'
+import Accordian from './MainComponents/Accordian'
 import { questions } from '../data'
 
 const FAQs = () => {

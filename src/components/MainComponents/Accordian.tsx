@@ -1,7 +1,7 @@
 import React, { ReactNode, FC, useState } from 'react'
-import useOnClickOut from '../hooks/useOnClickOut'
+import useOnClickOut from '../../hooks/useOnClickOut'
 import { motion, AnimatePresence } from 'framer-motion'
-import { images } from '../assets'
+import { images } from '../../assets'
 
 interface Props {
   text: string

@@ -1,21 +1,18 @@
-import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { BrowserRouter } from 'react-router-dom'
-import Header from './components/Header'
-import IntroSection from './components/IntroSection'
-import RulesAndGudelines from './components/RulesAndGuidelines'
-import Attributes from './components/Attributes'
-import FAQs from './components/FAQs'
+import Navbar from './components/MainComponents/Navbar'
+import Home from './views/Home'
 
 function App() {
   return (
     <BrowserRouter>
       <div className='font-montserrat bg-background-950 text-sm'>
-        <Header />
-        <IntroSection />
-        <RulesAndGudelines />
-        <Attributes />
-        <FAQs />
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<h1>Contact us</h1>} />
+          <Route path='/register' element={<h1>Sign Up</h1>} />
+        </Routes>
       </div>
     </BrowserRouter>
   )

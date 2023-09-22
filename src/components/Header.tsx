@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from './Navbar'
+import Navbar from './MainComponents/Navbar'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
 import { images } from '../assets'
@@ -48,8 +48,7 @@ const Header = () => {
   }, [targetDate])
 
   return (
-    <header className='mx-auto min-h-screen flex flex-col px-5 md:px-20 overflow-x-hidden'>
-      <Navbar />
+    <header className=' pt-20 mx-auto min-h-screen flex flex-col px-5 md:px-20 overflow-x-hidden'>
       <div className='  max-w-7xl mx-auto pt-10 flex-auto flex flex-col relative'>
         <div className=' flex justify-center md:justify-end '>
           {isTyping ? (
@@ -59,7 +58,7 @@ const Header = () => {
                 () => setisTyping(false),
               ]}
               cursor={false}
-              className=' text-lg md:text-2xl text-white-100 font-bold italic'
+              className=' text-center md:text-2xl text-white-100 font-bold italic'
             />
           ) : (
             <h1 className=' text-center md:text-2xl text-white-100 font-bold italic'>
@@ -87,7 +86,7 @@ const Header = () => {
               <img
                 src={images.creative}
                 alt=''
-                className=' w-6 md:w-9 absolute top-[-30px] right-[75px]  md:top-[-40px] md:right-[145px] lg:right-[180px]'
+                className=' w-4 md:w-9 absolute top-[-10px] right-[75px]  md:top-[-40px] md:right-[145px] lg:right-[180px]'
               />
               getlinked Tech <br />
               Hackathon <span className=' text-secondary-500'> 1.0</span>

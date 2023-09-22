@@ -78,7 +78,7 @@ export const questions: { question: string; answer: string }[] = [
   },
 ]
 
-interface Timeline {
+export interface Timeline {
   index: number
   title: string
   sub: string
