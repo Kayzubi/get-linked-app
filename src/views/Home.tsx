@@ -5,6 +5,8 @@ import RulesAndGudelines from '../components/RulesAndGuidelines'
 import Attributes from '../components/Attributes'
 import FAQs from '../components/FAQs'
 import Timeline from '../components/Timeline'
+import Prizes from '../components/Prizes'
+import Sponsors from '../components/Sponsors'
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <Attributes />
       <FAQs />
       <Timeline />
+      <Prizes />
+      <Sponsors />
     </>
   )
 }
