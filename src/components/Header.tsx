@@ -48,9 +48,9 @@ const Header = () => {
   }, [targetDate])
 
   return (
-    <header className='h-screen flex flex-col px-5  overflow-hidden'>
+    <header className='mx-auto min-h-screen flex flex-col px-5 md:px-20 overflow-x-hidden'>
       <Navbar />
-      <div className=' mx-auto pt-10 flex-auto flex flex-col relative'>
+      <div className='  max-w-7xl mx-auto pt-10 flex-auto flex flex-col relative'>
         <div className=' flex justify-center md:justify-end '>
           {isTyping ? (
             <TypeAnimation
@@ -62,7 +62,7 @@ const Header = () => {
               className=' text-lg md:text-2xl text-white-100 font-bold italic'
             />
           ) : (
-            <h1 className=' text-lg text-center md:text-2xl text-white-100 font-bold italic'>
+            <h1 className=' text-center md:text-2xl text-white-100 font-bold italic'>
               Igniting a Revolution in{' '}
               <span className=' relative'>
                 HR Innovation{' '}
@@ -77,32 +77,36 @@ const Header = () => {
             </h1>
           )}
         </div>
-        <div className=' md:grid grid-cols-2 flex-auto'>
-          <div className=' text-center md:text-left h-1/2 pt-10 md:h-full md:pt-20 z-20'>
+        <div className=' lg:grid grid-cols-2 flex-auto'>
+          <div className=' text-center md:text-left h-1/2 pt-10 md:h-full md:pt-28 z-20'>
             <motion.h1
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 2 }}
-              className=' text-white-100 font-clash w-max relative mx-auto md:mx-0 font-extrabold text-4xl md:text-6xl mb-4'>
+              className=' text-white-100 font-clash w-max relative mx-auto md:mx-0 font-extrabold text-4xl md:text-6xl mb-4 lg:text-7xl'>
               <img
                 src={images.creative}
                 alt=''
-                className=' w-6 md:w-9 absolute top-[-30px] right-[75px]  md:top-[-40px] md:right-[145px]'
+                className=' w-6 md:w-9 absolute top-[-30px] right-[75px]  md:top-[-40px] md:right-[145px] lg:right-[180px]'
               />
               getlinked Tech <br />
               Hackathon <span className=' text-secondary-500'> 1.0</span>
               <img
-                className=' inline w-9 md:w-12'
+                className=' inline w-9 md:w-12 lg:w-14'
                 src={images.chain}
                 alt=''
               />{' '}
-              <img className=' inline w-9 md:w-12' src={images.blast} alt='' />
+              <img
+                className=' inline w-9 md:w-12 lg:w-14'
+                src={images.blast}
+                alt=''
+              />
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2 }}
-              className=' text-white-100 text-lg mb-8 md:w-2/3 '>
+              className=' text-white-100 md:text-lg mb-8 md:w-2/3 '>
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </motion.p>
@@ -159,17 +163,17 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 3, delay: 3 }}
-            className='  h-1/2 pt-5 md:h-full md:pt-16 relative'>
-            <div className=' absolute bottom-0 right-0 h-full w-full'>
+            className='  h-1/2 pt-5 md:h-full md:pt-16'>
+            <div className=' h-1/2 pt-5 md:h-full md:pt-16'>
               <img
                 src={images.man}
                 alt=''
-                className=' absolute bottom-0 right-0 h-full w-full object-contain grayscale'
+                className=' lg:absolute bottom-0 right-0 object-contain grayscale'
               />
               <img
                 src={images.matric}
                 alt=''
-                className=' absolute right-0 bottom-0  h-full w-full object-contain'
+                className=' absolute right-0 bottom-0 object-contain'
               />
             </div>
           </motion.div>

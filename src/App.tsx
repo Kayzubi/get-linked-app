@@ -1,7 +1,5 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
-import Navbar from './components/Navbar'
 import { BrowserRouter } from 'react-router-dom'
 import Header from './components/Header'
 
