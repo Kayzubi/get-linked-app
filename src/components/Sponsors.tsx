@@ -21,7 +21,11 @@ const Sponsors = () => {
         Getlinked Hackathon 1.0 is honored to have the following major <br />
         companies as its partners and sponsors
       </p>
-      <div className=' max-w-7xl h-full py-20 px-5 mx-auto flex justify-center items-center border border-secondary-500 w-full'>
+      <div className=' max-w-7xl h-full py-20 px-5 mx-auto flex justify-center items-center border border-secondary-500 w-full relative'>
+        <span className='star after:bg-primary-500 before:bg-primary-500 top-[-10%] left-[5%]'></span>
+        <span className='star-sm after:bg-primary-500 before:bg-primary-500 top-[15%] left-[60%]'></span>
+        <span className='star-sm after:bg-white-100 before:bg-white-100 bottom-[15%] left-[60%]'></span>
+
         <img src={partners} alt='' />
       </div>
     </section>

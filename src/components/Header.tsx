@@ -80,73 +80,78 @@ const Header = () => {
         </div>
         <div className=' lg:grid grid-cols-2 flex-auto'>
           <div className=' text-center md:text-left h-1/2 pt-10 md:h-full md:pt-28 z-20'>
-            <motion.h1
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              className=' text-white-100 font-clash w-max relative mx-auto md:mx-0 font-extrabold text-4xl md:text-6xl mb-4 lg:text-7xl'>
-              <img
-                src={images.creative}
-                alt=''
-                className=' w-4 md:w-9 absolute top-[-10px] right-[75px]  md:top-[-40px] md:right-[145px] lg:right-[180px]'
-              />
-              getlinked Tech <br />
-              Hackathon <span className=' text-secondary-500'> 1.0</span>
-              <img
-                className=' inline w-9 md:w-12 lg:w-14'
-                src={images.chain}
-                alt=''
-              />{' '}
-              <img
-                className=' inline w-9 md:w-12 lg:w-14'
-                src={images.blast}
-                alt=''
-              />
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className=' text-white-100 md:text-lg mb-8 md:w-2/3 '>
-              Participate in getlinked tech Hackathon 2023 stand a chance to win
-              a Big prize
-            </motion.p>
-            <motion.button
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              onClick={() => navigate('/register')}
-              transition={{ delay: 0.5 }}
-              className='  bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-5 px-5 rounded-sm outline-none w-40 text-white-100 text-lg '>
-              Register
-            </motion.button>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className=' flex justify-center items-center gap-6 mt-10 md:mt-20 md:justify-start'>
-              <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
-                {timeRemaining.days >= 10
-                  ? timeRemaining.days
-                  : `0${timeRemaining.days}`}
-                <span className=' text-sm'>D</span>
-              </h2>
-              <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
-                {timeRemaining.hours >= 10
-                  ? timeRemaining.hours
-                  : `0${timeRemaining.hours}`}
-                <span className=' text-sm'>H</span>
-              </h2>
-              <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
-                {timeRemaining.minutes >= 10
-                  ? timeRemaining.minutes
-                  : `0${timeRemaining.minutes}`}{' '}
-                <span className=' text-sm'>M</span>
-              </h2>{' '}
-              <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
-                {timeRemaining.seconds >= 10
-                  ? timeRemaining.seconds
-                  : `0${timeRemaining.seconds}`}{' '}
-                <span className=' text-sm'>S</span>
-              </h2>
-            </motion.div>
+            <div className=' relative'>
+              <span className='star after:bg-white-100 before:bg-white-100 top-[-15px] lg:top-[-40px] left-[50px] duration-100'></span>
+              <span className='star-sm after:bg-white-10 before:bg-white-10 top-[-20px] right-[50px]'></span>
+              <span className='star-sm after:bg-white-10 before:bg-white-10 bottom-20 right-10 lg:right-[200px]'></span>
+              <motion.h1
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                className=' text-white-100 font-clash w-max relative mx-auto md:mx-0 font-extrabold text-4xl md:text-6xl mb-4 lg:text-7xl'>
+                <img
+                  src={images.creative}
+                  alt=''
+                  className=' w-4 md:w-9 absolute top-[-10px] right-[75px]  md:top-[-40px] md:right-[145px] lg:right-[180px]'
+                />
+                getlinked Tech <br />
+                Hackathon <span className=' text-secondary-500'> 1.0</span>
+                <img
+                  className=' inline w-9 md:w-12 lg:w-14'
+                  src={images.chain}
+                  alt=''
+                />{' '}
+                <img
+                  className=' inline w-9 md:w-12 lg:w-14'
+                  src={images.blast}
+                  alt=''
+                />
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className=' text-white-100 md:text-lg mb-8 md:w-2/3 '>
+                Participate in getlinked tech Hackathon 2023 stand a chance to
+                win a Big prize
+              </motion.p>
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                onClick={() => navigate('/register')}
+                transition={{ delay: 0.5 }}
+                className='  bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-5 px-5 rounded-sm outline-none w-40 text-white-100 text-lg '>
+                Register
+              </motion.button>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className=' flex justify-center items-center gap-6 mt-10 md:mt-20 md:justify-start'>
+                <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
+                  {timeRemaining.days >= 10
+                    ? timeRemaining.days
+                    : `0${timeRemaining.days}`}
+                  <span className=' text-sm'>D</span>
+                </h2>
+                <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
+                  {timeRemaining.hours >= 10
+                    ? timeRemaining.hours
+                    : `0${timeRemaining.hours}`}
+                  <span className=' text-sm'>H</span>
+                </h2>
+                <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
+                  {timeRemaining.minutes >= 10
+                    ? timeRemaining.minutes
+                    : `0${timeRemaining.minutes}`}{' '}
+                  <span className=' text-sm'>M</span>
+                </h2>{' '}
+                <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
+                  {timeRemaining.seconds >= 10
+                    ? timeRemaining.seconds
+                    : `0${timeRemaining.seconds}`}{' '}
+                  <span className=' text-sm'>S</span>
+                </h2>
+              </motion.div>
+            </div>
           </div>
           <img
             src={images.flare}

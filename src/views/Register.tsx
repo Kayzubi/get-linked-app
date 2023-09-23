@@ -6,6 +6,7 @@ import FormInput from '../components/MainComponents/FormInput'
 import useRegister from '../hooks/useRegister'
 import congrats from '../assets/congratulation.png'
 import { motion, AnimatePresence } from 'framer-motion'
+import movement from '../assets/movement.png'
 
 const Register = () => {
   const [categories, setcategories] = useState<{ id: number; name: string }[]>(
@@ -82,15 +83,27 @@ const Register = () => {
         className=' absolute hidden lg:block bottom-0 right-[-50px] lg:bottom-[-150px] lg:right-[-200px] opacity-[0.25]'
       />
       <div className=' h-full min-h-[550px] block max-w-7xl mx-auto lg:grid grid-cols-2'>
-        <div className=' pt-20 z-30'>
+        <div className=' lg:pt-20 z-30 relative'>
+          <span className='star-sm after:bg-primary-500 before:bg-primary-500 top-[5%] left-0'></span>
+          <span className='star-sm after:bg-white-10 before:bg-white-10 bottom-[5%] left-0'></span>
+          <span className='star-sm after:bg-primary-500 before:bg-primary-500 bottom-[30%] right-20'></span>
+
+          <h1 className=' lg:hidden text-2xl text-secondary-500 font-bold'>
+            Register
+          </h1>
           <img src={man} alt='' />
         </div>
-        <div className='py-20 lg:px-10 px-5 lg:bg-white-100 rounded-xl lg:bg-opacity-5 lg:backdrop-filter lg:backdrop-blur-lg'>
-          <h1 className=' text-2xl text-secondary-500 font-bold'>
+        <div className='py-20 lg:px-10 px-5 lg:bg-white-100 rounded-xl lg:bg-opacity-5 lg:backdrop-filter lg:backdrop-blur-lg relative'>
+          <span className='star after:bg-white-10 before:bg-white-10 top-[5%] right-[15%]'></span>
+          <span className='star-sm after:bg-white-100 before:bg-white-100 bottom-[-5px] right-[20%]'></span>
+
+          <h1 className=' hidden lg:block text-2xl text-secondary-500 font-bold'>
             Register <br /> Let us know about it!
           </h1>
-          <p className=' lg:hidden mt-2 '>Be part of this movement</p>
-          <h2>CREATE YOUR ACCOUNT</h2>
+          <p className='my-3 flex gap-2 items-end '>
+            Be part of this movement <img src={movement} alt='' />
+          </p>
+          <h2 className=' text-xl font-medium my-3'>CREATE YOUR ACCOUNT</h2>
           <form
             onSubmit={formMethods.handleSubmit(onSubmit)}
             className=' z-30 mt-10 flex flex-col gap-3'>

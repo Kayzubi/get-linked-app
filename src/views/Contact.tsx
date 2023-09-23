@@ -38,7 +38,9 @@ const Contact = () => {
         className=' absolute hidden lg:block bottom-0 right-[-50px] lg:bottom-[-150px] lg:right-[-200px] opacity-[0.25]'
       />
       <div className=' h-full min-h-[550px] block max-w-7xl mx-auto lg:grid grid-cols-2'>
-        <div className=' pt-20 hidden lg:flex flex-col gap-5  z-30'>
+        <div className=' pt-20 hidden lg:flex flex-col gap-5  z-30 relative'>
+          <span className='star-sm after:bg-primary-500 before:bg-primary-500 top-0 left-0'></span>
+
           <h2 className=' text-2xl text-secondary-500 font-bold'>
             Get in touch
           </h2>
@@ -76,7 +78,11 @@ const Contact = () => {
             />
           </div>
         </div>
-        <div className='py-20 lg:px-10 px-5 lg:bg-white-100 rounded-xl lg:bg-opacity-5 lg:backdrop-filter lg:backdrop-blur-lg'>
+        <div className='py-20 lg:px-10 px-5 lg:bg-white-100 rounded-xl lg:bg-opacity-5 lg:backdrop-filter lg:backdrop-blur-lg relative'>
+          <span className='star after:bg-white-10 before:bg-white-10 top-0 right-[10%]'></span>
+          <span className='star-sm after:bg-white-100 before:bg-white-100 bottom-0 right-0'></span>
+          <span className='star-sm after:bg-primary-500 before:bg-primary-500 bottom-[25%] left-[-2%]'></span>
+
           <h1 className=' text-2xl text-secondary-500 font-bold'>
             Questions or need assistance? <br /> Let us know about it!
           </h1>
@@ -92,8 +98,8 @@ const Contact = () => {
               label='First name'
               placeHolder='First Name'
               type='text'
-              className=' mb-3 h-10 border rounded-lg px-5 py-1 flex items-center  z-30'
-              errorClass=' mb-3 h-10 border border-[red] rounded-lg px-5 py-1 flex items-center  z-30'
+              className=' mb-3 h-10 border-2 rounded-lg px-5 py-1 flex items-center  z-30'
+              errorClass=' mb-3 h-10 border-2 border-[red] rounded-lg px-5 py-1 flex items-center  z-30'
               required
             />
             <FormInput
@@ -102,8 +108,8 @@ const Contact = () => {
               label='Email'
               placeHolder='Email'
               type='email'
-              className=' mb-3 h-10 border rounded-lg px-5 py-1 flex items-center  z-30'
-              errorClass=' mb-3 h-10 border border-[red] rounded-lg px-5 py-1 flex items-center  z-30'
+              className=' mb-3 h-10 border-2 rounded-lg px-5 py-1 flex items-center  z-30'
+              errorClass=' mb-3 h-10 border-2 border-[red] rounded-lg px-5 py-1 flex items-center  z-30'
               required
             />
             <TextArea
@@ -111,8 +117,8 @@ const Contact = () => {
               inputName='message'
               label='Message'
               placeHolder='Message'
-              className=' mb-3 h-44 border rounded-lg px-5 py-1 flex items-center  z-30'
-              errorClass=' mb-3 h-44 border border-[red] rounded-lg px-5 py-1 flex items-center  z-30'
+              className=' mb-3 h-44 border-2 rounded-lg px-5 py-1 flex items-center  z-30'
+              errorClass=' mb-3 h-44 border-2 border-[red] rounded-lg px-5 py-1 flex items-center  z-30'
               required
             />
             <button

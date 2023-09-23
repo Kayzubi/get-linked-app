@@ -19,7 +19,10 @@ const Prizes = () => {
           className=' absolute hidden md:block bottom-[-20%] right-[-30%] opacity-[0.25]'
         />
         <div className=' max-w-7xl h-full mx-auto lg:grid grid-cols-2 w-full'>
-          <div className=' pt-5 flex flex-col justify-center gap-9   text-center lg:text-left'>
+          <div className=' pt-5 flex flex-col justify-center gap-9   text-center lg:text-left relative'>
+            <span className='star-sm after:bg-primary-500 before:bg-primary-500 top-0 left-20'></span>
+            <span className='star-sm after:bg-white-100 before:bg-white-100 bottom-[5%] left-[25%]'></span>
+
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -42,12 +45,18 @@ const Prizes = () => {
               Highlight of the prizes or rewards for winners and <br /> for
               participants.
             </motion.p>
-            <motion.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={prizes}
-              alt=''
-            />
+            <div className=' relative'>
+              <span className='star-sm after:bg-white-100 before:bg-white-100 top-[-5%] left-[25%]'></span>
+              <span className='star-sm after:bg-white-100 before:bg-white-100 top-[35%] right-[-5%]'></span>
+              <span className='star-sm after:bg-white-10 before:bg-white-10 bottom-0 right-[25%]'></span>
+
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                src={prizes}
+                alt=''
+              />
+            </div>
           </div>
         </div>
       </section>

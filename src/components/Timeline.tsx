@@ -14,9 +14,14 @@ const Timeline = () => {
             Here is the breakdown of the time we anticipate <br /> using for the
             upcoming event.
           </p>
-          {timeline.map((item) => (
-            <TimellineItem data={item} key={item.index} />
-          ))}
+          <div className=' relative'>
+            <span className='star-sm after:bg-primary-500 before:bg-primary-500 top-0 left-[20%]'></span>
+            <span className='star-sm after:bg-white-100 before:bg-white-100 top-[35%] right-[20%]'></span>
+            <span className='star-sm after:bg-white-10 before:bg-white-10 bottom-0 left-[10%]'></span>
+            {timeline.map((item) => (
+              <TimellineItem data={item} key={item.index} />
+            ))}
+          </div>
         </div>
       </section>
     </AnimatePresence>

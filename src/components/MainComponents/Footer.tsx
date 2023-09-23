@@ -5,8 +5,12 @@ import { icons } from '../../assets'
 const Footer = () => {
   return (
     <div className=' min-h-[550px] bg-ebony-950 text-white-100 flex items-center py-10 px-5'>
-      <div className=' max-w-7xl mx-auto'>
-        <div className=' min-h-300px  lg:grid grid-cols-3 pb-10'>
+      <div className=' max-w-7xl mx-auto relative'>
+        <div className=' min-h-300px  lg:grid grid-cols-3 pb-10 relative'>
+          <span className='star-sm after:bg-white-100 before:bg-white-100 top-[5%] left-[-5%]'></span>
+          <span className='star-sm after:bg-primary-500 before:bg-primary-500 bottom-[10px] left-[50%]'></span>
+          <span className='star-sm after:bg-white-10 before:bg-white-10 top-[5%] right-[40%]'></span>
+          <span className='star-sm after:bg-white-100 before:bg-white-100 bottom-[5%] right-0'></span>
           <div className=' flex flex-col gap-5 pb-5'>
             <h1 className=' text-2xl font-bold font-clash'>
               get <span className=' text-secondary-500'>Linked</span>

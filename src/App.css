@@ -38,38 +38,93 @@
 }
 
 .star {
-  position: relative;
-  margin: 1em auto;
-  width: 1em;
-  font-size: 12em;
+  position: absolute;
+  margin: 0;
+  width: 1rem;
+  font-size: 1.2rem;
+  animation: starFlash 2s linear infinite;
 }
 
 .star:before {
   content: '';
   position: absolute;
-  background: red;
-  width: 1em;
-  height: 1.15em;
+  width: 1rem;
+  height: 1rem;
   transform: rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
 }
 
 .star:after {
   content: '';
   position: absolute;
-  background: red;
-  width: 1em;
-  height: 1.15em;
+  width: 1rem;
+  height: 1rem;
   transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+.star-sm {
+  position: absolute;
+  margin: 0;
+  width: 0.5rem;
+  font-size: 0.6rem;
+  animation: starFlash 3s linear infinite;
+}
+
+.star-sm:before {
+  content: '';
+  position: absolute;
+  width: 0.5rem;
+  height: 0.8rem;
+  transform: rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+.star-sm:after {
+  content: '';
+  position: absolute;
+  width: 0.5rem;
+  height: 0.8rem;
+  transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+@media (max-width: 425px) {
+  .star {
+    width: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .star:before {
+    width: 0.5rem;
+    height: 0.8rem;
+  }
+
+  .star:after {
+    width: 0.5rem;
+    height: 0.8rem;
+  }
+
+  .star-sm {
+    width: 4px;
+    font-size: 6px;
+  }
+
+  .star-sm:before {
+    width: 4px;
+    height: 6px;
+  }
+
+  .star-sm:after {
+    width: 4px;
+    height: 6px;
+  }
 }
 
 @keyframes starFlash {
   0% {
-    r: 2.5;
+    opacity: 0;
   }
   50% {
-    r: 0.5;
+    opacity: 0.5;
   }
   100% {
-    r: 1.5;
+    opacity: 1;
   }
 }

@@ -16,6 +16,9 @@ const Attributes = () => {
         />
         <div className=' max-w-7xl h-full mx-auto lg:grid grid-cols-2 w-full'>
           <div className=' relative flex items-center'>
+            <span className='star-sm after:bg-primary-500 before:bg-primary-500 top-0 left-20'></span>
+            <span className='star-sm after:bg-white-10 before:bg-white-10 top-[50%] right-[50%]'></span>
+            <span className='star after:bg-white-100 before:bg-white-100 bottom-0 right-20'></span>
             <img
               src={images.flare}
               alt=''
@@ -28,7 +31,7 @@ const Attributes = () => {
               alt=''
             />
           </div>
-          <div className=' pt-5 flex flex-col justify-center gap-9  text-white-100 text-center lg:text-left'>
+          <div className=' pt-5 flex flex-col justify-center gap-9  text-white-100 text-center lg:text-left '>
             <motion.h1
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}

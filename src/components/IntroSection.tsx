@@ -7,7 +7,8 @@ const IntroSection = () => {
     <AnimatePresence>
       <section className=' min-h-[500px] py-20 flex items-center px-5 border-b border-b-white-10'>
         <div className=' max-w-7xl h-full mx-auto lg:grid grid-cols-2 w-full'>
-          <div>
+          <div className=' relative'>
+            <span className='star-sm after:bg-primary-500 before:bg-primary-500 top-[20%] left-0'></span>
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -15,7 +16,8 @@ const IntroSection = () => {
               alt=''
             />
           </div>
-          <div className=' pt-5 flex flex-col justify-center gap-9  text-white-100 text-center lg:text-left'>
+          <div className=' pt-5 flex flex-col justify-center gap-9  text-white-100 text-center lg:text-left relative'>
+            <span className='star after:bg-primary-500 before:bg-primary-500 top-[30%] right-0'></span>
             <motion.h1
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
