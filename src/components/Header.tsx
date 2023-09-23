@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import Navbar from './MainComponents/Navbar'
-import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { TypeAnimation } from 'react-type-animation'
 
-import { images } from '../assets'
 import { useNavigate } from 'react-router-dom'
+import { images } from '../assets'
 
 export const calculateTimeRemaining = (endTime: number) => {
   const total = Math.max(0, endTime)

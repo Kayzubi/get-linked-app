@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import useHttps from './useHttps'
-import { HttpConfig, SuccessHttpResponse } from '../https'
-import { httpErrorHandlerFunction } from '../helpers'
+import { useState } from 'react'
 import toast from 'react-hot-toast'
+import { httpErrorHandlerFunction } from '../helpers'
+import { HttpConfig, SuccessHttpResponse } from '../https'
+import useHttps from './useHttps'
 
 const useRegister = () => {
   const [loading, setloading] = useState(false)

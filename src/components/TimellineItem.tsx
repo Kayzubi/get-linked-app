@@ -44,7 +44,7 @@ const TimellineItem: FC<Prop> = ({ data }) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2 }}
             className=' text-secondary-500 font-bold lg:text-lg'>
-            {data.date}
+            {date}
           </motion.h1>
         </div>
       </div>
