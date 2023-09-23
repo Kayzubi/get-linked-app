@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Navbar from './MainComponents/Navbar'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
+
 import { images } from '../assets'
+import { useNavigate } from 'react-router-dom'
 
 export const calculateTimeRemaining = (endTime: number) => {
   const total = Math.max(0, endTime)
@@ -24,6 +26,7 @@ interface RemainingTimeType {
 
 const Header = () => {
   const [isTyping, setisTyping] = useState(true)
+  const navigate = useNavigate()
 
   const targetDate = new Date('2023-09-26T00:00:00').getTime()
   const [timeRemaining, setTimeRemaining] = useState<RemainingTimeType>(
@@ -112,6 +115,7 @@ const Header = () => {
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              onClick={() => navigate('/register')}
               transition={{ duration: 2, delay: 2 }}
               className='  bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-5 px-5 rounded-sm outline-none w-40 text-white-100 text-lg '>
               Register

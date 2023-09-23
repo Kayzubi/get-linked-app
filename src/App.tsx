@@ -3,6 +3,8 @@ import './App.css'
 import Navbar from './components/MainComponents/Navbar'
 import Home from './views/Home'
 import Footer from './components/MainComponents/Footer'
+import Contact from './views/Contact'
+import Register from './views/Register'
 
 function App() {
   return (
@@ -11,8 +13,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/contact' element={<h1>Contact us</h1>} />
-          <Route path='/register' element={<h1>Sign Up</h1>} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='*' element={<Home />} />
         </Routes>
         <Footer />
       </div>

@@ -1,8 +1,27 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import hamburger from '../../assets/hamburger.svg'
 import close from '../../assets/close.svg'
+
+const navLinks = [
+  {
+    name: 'Timeline',
+    route: 'timeline',
+  },
+  {
+    name: 'Overview',
+    route: 'overview',
+  },
+  {
+    name: 'FAQs',
+    route: 'faqs',
+  },
+  {
+    name: 'Contact',
+    route: 'contact',
+  },
+]
 
 const Navbar = () => {
   const [navOpen, setnavOpen] = useState(false)
@@ -10,28 +29,32 @@ const Navbar = () => {
   return (
     <div className=' py-6 border-b border-b-white-10 z-50 absolute left-0 w-full top-0 bg-background-950'>
       <div className=' max-w-7xl px-5 mx-auto flex justify-between items-center text-white-100 '>
-        <h1 className=' text-2xl font-bold font-clash'>
-          get <span className=' text-secondary-500'>Linked</span>
-        </h1>
-        <ul className=' hidden md:flex items-center gap-10 text-sm'>
-          <li>
-            <Link to='#'>Timeline</Link>
-          </li>
-          <li>
-            <Link to='#'>Overview</Link>
-          </li>
-          <li>
-            <Link to='#'>FAQs</Link>
-          </li>
-          <li>
-            <Link to='#'>Contact</Link>
-          </li>
+        <Link to='/'>
+          <h1 className=' text-2xl font-bold font-clash'>
+            get <span className=' text-secondary-500'>Linked</span>
+          </h1>
+        </Link>
+        <ul className=' hidden md:flex items-center gap-10 font-semibold'>
+          {navLinks.map((item) => (
+            <li key={item.name}>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? ' bg-clip-text text-transparent bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 font-semibold'
+                    : ''
+                }
+                to={item.route}>
+                {item.name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
-        <button
+        <Link
+          to='/register'
           type='button'
           className=' hidden md:block bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 text-white px-5 rounded-sm outline-none '>
           Register
-        </button>
+        </Link>
         <button
           className=' p-4 rounded-sm outline-none bg-transparent md:hidden'
           onClick={() => setnavOpen(true)}>
@@ -54,24 +77,28 @@ const Navbar = () => {
               </span>
             </button>
             <ul className=' flex flex-col gap-10 text-2xl w-full'>
-              <li>
-                <Link to='#'>Timeline</Link>
-              </li>
-              <li>
-                <Link to='#'>Overview</Link>
-              </li>
-              <li>
-                <Link to='#'>FAQs</Link>
-              </li>
-              <li>
-                <Link to='#'>Contact</Link>
-              </li>
+              {navLinks.map((item) => (
+                <li key={item.name}>
+                  <NavLink
+                    onClick={() => setnavOpen(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? ' bg-clip-text text-transparent bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 font-semibold'
+                        : ''
+                    }
+                    to={item.route}>
+                    {item.name}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
-            <button
+            <Link
+              to='/register'
               type='button'
-              className=' bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-5 text-white px-5 rounded-sm outline-none w-52  '>
+              onClick={() => setnavOpen(false)}
+              className=' bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-5 text-white text-center px-5 rounded-sm outline-none w-32  '>
               Register
-            </button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

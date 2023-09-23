@@ -2,8 +2,10 @@ import React from 'react'
 import manAndWoman from '../assets/man and woman talking.png'
 import { motion, AnimatePresence } from 'framer-motion'
 import { images } from '../assets'
+import { useNavigate } from 'react-router-dom'
 
 const Attributes = () => {
+  const navigate = useNavigate()
   return (
     <AnimatePresence>
       <section className=' min-h-screen py-20 flex items-center px-5 border-b border-b-white-10 relative overflow-hidden'>
@@ -87,6 +89,7 @@ const Attributes = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 2 }}
+                onClick={() => navigate('/register')}
                 className=' mx-auto lg:mx-0 bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-2 px-2 rounded-sm outline-none w-28 text-white-100 text-lg '>
                 Register
               </motion.button>
