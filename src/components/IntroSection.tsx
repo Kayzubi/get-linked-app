@@ -11,7 +11,6 @@ const IntroSection = () => {
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 4 }}
               src={lightBuld}
               alt=''
             />
@@ -20,7 +19,6 @@ const IntroSection = () => {
             <motion.h1
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
               className='text-2xl lg:text-4xl font-bold font-clash'>
               Introduction to getlinked <br />{' '}
               <span className=' text-secondary-500'>stechHackathon 1.0</span>{' '}
@@ -28,8 +26,7 @@ const IntroSection = () => {
             <motion.p
               className=' leading-8'
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}>
+              whileInView={{ opacity: 1 }}>
               Our tech hackathon is a melting pot of visionaries, and its
               purpose is as clear as day: to shape the future. Whether you're a
               coding genius, a design maverick, or a concept wizard, you'll have

@@ -23,7 +23,6 @@ const Prizes = () => {
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 4 }}
               src={cup}
               alt=''
             />
@@ -32,7 +31,6 @@ const Prizes = () => {
             <motion.h1
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
               className='text-2xl lg:text-4xl font-bold font-clash mb-5'>
               Prizes and <br />{' '}
               <span className=' text-secondary-500'>Rewards</span>{' '}
@@ -40,15 +38,13 @@ const Prizes = () => {
             <motion.p
               className=' leading-8 mb-20'
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}>
+              whileInView={{ opacity: 1 }}>
               Highlight of the prizes or rewards for winners and <br /> for
               participants.
             </motion.p>
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 4 }}
               src={prizes}
               alt=''
             />

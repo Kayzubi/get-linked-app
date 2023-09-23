@@ -18,14 +18,10 @@ const TimellineItem: FC<Prop> = ({ data }) => {
           <motion.h1
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 2 }}
             className=' text-secondary-500 font-bold lg:text-lg'>
             {title}
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 2 }}>
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
             {sub}
           </motion.p>
         </div>
@@ -42,7 +38,6 @@ const TimellineItem: FC<Prop> = ({ data }) => {
           <motion.h1
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 2 }}
             className=' text-secondary-500 font-bold lg:text-lg'>
             {date}
           </motion.h1>

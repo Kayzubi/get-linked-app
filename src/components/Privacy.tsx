@@ -21,7 +21,6 @@ const Privacy = () => {
             <motion.h1
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
               className='text-2xl lg:text-4xl font-bold font-clash z-20'>
               Privacy Policy and <br />{' '}
               <span className=' text-secondary-500'>Terms</span>{' '}
@@ -29,14 +28,12 @@ const Privacy = () => {
             <motion.p
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
               className=' z-20'>
               Last updated on September 12, 2023
             </motion.p>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}
               className=' z-20'>
               Below are our privacy & policy, which outline a lot of goodies.
               it’s our aim to always take of our participant
@@ -44,7 +41,6 @@ const Privacy = () => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}
               className=' border border-secondary-500 py-20 mb-10 px-5 z-20'>
               <p>
                 At getlinked tech Hackathon 1.0, we value your privacy and are
@@ -76,7 +72,7 @@ const Privacy = () => {
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 2, delay: 2 }}
+                transition={{ delay: 0.5 }}
                 className=' mx-auto flex bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2  px-5 rounded-sm outline-none w-36 text-white-100 text-lg '>
                 Read more
               </motion.button>
@@ -91,7 +87,6 @@ const Privacy = () => {
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 4 }}
               src={privacy}
               alt=''
             />

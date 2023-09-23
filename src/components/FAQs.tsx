@@ -13,7 +13,6 @@ const FAQs = () => {
             <motion.h1
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
               className='text-2xl lg:text-4xl font-bold font-clash'>
               Freaquently Asked <br />{' '}
               <span className=' text-secondary-500'>Questions</span>{' '}
@@ -21,8 +20,7 @@ const FAQs = () => {
             <motion.div
               className=' leading-8 flex flex-col gap-5'
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}>
+              whileInView={{ opacity: 1 }}>
               {questions.map((item, index) => (
                 <Accordian
                   key={index}
@@ -38,7 +36,6 @@ const FAQs = () => {
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 4 }}
               src={thinking}
               alt=''
             />

@@ -22,7 +22,6 @@ const RulesAndGudelines = () => {
             <motion.h1
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
               className='text-2xl lg:text-4xl font-bold font-clash'>
               Rules and <br />{' '}
               <span className=' text-secondary-500'>Guidelines</span>{' '}
@@ -30,8 +29,7 @@ const RulesAndGudelines = () => {
             <motion.p
               className=' leading-8'
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}>
+              whileInView={{ opacity: 1 }}>
               Our tech hackathon is a melting pot of visionaries, and its
               purpose is as clear as day: to shape the future. Whether you're a
               coding genius, a design maverick, or a concept wizard, you'll have
@@ -45,7 +43,6 @@ const RulesAndGudelines = () => {
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 4 }}
               src={woman}
               alt=''
             />

@@ -24,7 +24,6 @@ const Attributes = () => {
             <motion.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 4 }}
               src={manAndWoman}
               alt=''
             />
@@ -33,7 +32,6 @@ const Attributes = () => {
             <motion.h1
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
               className='text-2xl lg:text-4xl font-bold font-clash'>
               Judging Criteria <br />{' '}
               <span className=' text-secondary-500'> Key attributes</span>{' '}
@@ -41,8 +39,7 @@ const Attributes = () => {
             <motion.div
               className=' leading-8 flex flex-col gap-5'
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}>
+              whileInView={{ opacity: 1 }}>
               <p>
                 <span className=' text-tertiary-500 font-bold'>
                   Innovation and Creativity:{' '}
@@ -88,7 +85,7 @@ const Attributes = () => {
               <motion.button
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 2 }}
+                transition={{ delay: 0.5 }}
                 onClick={() => navigate('/register')}
                 className=' mx-auto lg:mx-0 bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-2 px-2 rounded-sm outline-none w-28 text-white-100 text-lg '>
                 Register

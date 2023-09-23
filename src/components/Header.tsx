@@ -83,7 +83,6 @@ const Header = () => {
             <motion.h1
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
               className=' text-white-100 font-clash w-max relative mx-auto md:mx-0 font-extrabold text-4xl md:text-6xl mb-4 lg:text-7xl'>
               <img
                 src={images.creative}
@@ -106,7 +105,6 @@ const Header = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 2 }}
               className=' text-white-100 md:text-lg mb-8 md:w-2/3 '>
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
@@ -115,14 +113,14 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               onClick={() => navigate('/register')}
-              transition={{ duration: 2, delay: 2 }}
+              transition={{ delay: 0.5 }}
               className='  bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-5 px-5 rounded-sm outline-none w-40 text-white-100 text-lg '>
               Register
             </motion.button>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 2, delay: 2 }}
+              transition={{ delay: 0.5 }}
               className=' flex justify-center items-center gap-6 mt-10 md:mt-20 md:justify-start'>
               <h2 className=' font-unica text-4xl md:text-5xl text-white-100'>
                 {timeRemaining.days >= 10
@@ -164,7 +162,7 @@ const Header = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 3, delay: 3 }}
+            transition={{ delay: 1 }}
             className='  h-1/2 pt-5 md:h-full md:pt-16'>
             <div className=' h-1/2 pt-5 md:h-full md:pt-16'>
               <img
