@@ -7,6 +7,7 @@ import FAQs from '../components/FAQs'
 import Timeline from '../components/Timeline'
 import Prizes from '../components/Prizes'
 import Sponsors from '../components/Sponsors'
+import Privacy from '../components/Privacy'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Timeline />
       <Prizes />
       <Sponsors />
+      <Privacy />
     </>
   )
 }
