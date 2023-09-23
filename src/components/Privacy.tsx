@@ -8,7 +8,9 @@ import icon from '../assets/privacy icon.svg'
 const Privacy = () => {
   return (
     <AnimatePresence>
-      <section className=' min-h-screen py-20 flex items-center px-5 border-b border-b-white-10  overflow-hidden'>
+      <section
+        id='policy'
+        className=' min-h-screen py-20 flex items-center px-5 border-b border-b-white-10  overflow-hidden'>
         <div className=' max-w-7xl h-full mx-auto lg:grid grid-cols-2 w-full gap-10 '>
           <div className=' pt-5 flex flex-col justify-start gap-9  text-white-100 text-center lg:text-left relative'>
             <img

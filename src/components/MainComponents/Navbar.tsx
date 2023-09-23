@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className=' py-6 border-b border-b-white-10 z-50 absolute left-0 w-full top-0 bg-background-950'>
       <div className=' max-w-7xl px-5 mx-auto flex justify-between items-center text-white-100 '>
         <h1 className=' text-2xl font-bold font-clash'>
-          get <span className=' text-primary-500'>Linked</span>
+          get <span className=' text-secondary-500'>Linked</span>
         </h1>
         <ul className=' hidden md:flex items-center gap-10 text-sm'>
           <li>

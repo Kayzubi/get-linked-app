@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/MainComponents/Navbar'
 import Home from './views/Home'
+import Footer from './components/MainComponents/Footer'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/contact' element={<h1>Contact us</h1>} />
           <Route path='/register' element={<h1>Sign Up</h1>} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   )
