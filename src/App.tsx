@@ -5,11 +5,13 @@ import Home from './views/Home'
 import Footer from './components/MainComponents/Footer'
 import Contact from './views/Contact'
 import Register from './views/Register'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   return (
     <BrowserRouter>
       <div className='font-montserrat bg-background-950 text-sm'>
+        <Toaster />
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

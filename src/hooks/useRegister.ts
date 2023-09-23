@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import useHttps from './useHttps'
 import { HttpConfig, SuccessHttpResponse } from '../https'
+import { httpErrorHandlerFunction } from '../helpers'
+import toast from 'react-hot-toast'
 
 const useRegister = () => {
   const [loading, setloading] = useState(false)
@@ -16,7 +18,7 @@ const useRegister = () => {
       callback(response)
     }
 
-    request(url, onSuccess, setloading)
+    request(url, onSuccess, setloading, httpErrorHandlerFunction)
   }
 
   const registerUser = (data: any, callback: () => void) => {
@@ -30,13 +32,29 @@ const useRegister = () => {
       callback()
     }
 
-    request(url, onSuccess, setloading)
+    request(url, onSuccess, setloading, httpErrorHandlerFunction)
+  }
+
+  const sendMessage = (data: any, callback: () => void) => {
+    const url: HttpConfig = {
+      url: 'hackathon/contact-form',
+      method: 'post',
+      data,
+    }
+
+    const onSuccess = (response: SuccessHttpResponse<any>) => {
+      toast.success('Message Sent Successfully')
+      callback()
+    }
+
+    request(url, onSuccess, setloading, httpErrorHandlerFunction)
   }
 
   return {
     loading,
     getCategories,
     registerUser,
+    sendMessage,
   }
 }
 

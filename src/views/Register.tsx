@@ -38,9 +38,10 @@ const Register = () => {
     privacy_poclicy_accepted: boolean
   }> = (data) => {
     console.log(data)
-    registerUser({ ...data, group_size: Number(data.group_size) }, () =>
+    registerUser({ ...data, group_size: Number(data.group_size) }, () => {
       setshowModal(true)
-    )
+      formMethods.reset()
+    })
   }
 
   useEffect(() => {
@@ -220,8 +221,9 @@ const Register = () => {
 
             <button
               type='submit'
+              disabled={loading}
               className=' mx-auto lg:mx-0 mt-8 bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-2 px-2 rounded-sm outline-none w-28 text-white-100 text-lg '>
-              Submit
+              {loading ? 'Loading...' : 'Submit'}
             </button>
           </form>
         </div>

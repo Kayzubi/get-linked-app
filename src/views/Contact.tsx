@@ -4,22 +4,25 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import FormInput from '../components/MainComponents/FormInput'
 import TextArea from '../components/MainComponents/FormTextArea'
 import { images } from '../assets'
+import useRegister from '../hooks/useRegister'
 
 const Contact = () => {
   const formMethods = useForm({
     defaultValues: {
-      name: '',
+      first_name: '',
       email: '',
       message: '',
     },
   })
 
+  const { loading, sendMessage } = useRegister()
+
   const onSubmit: SubmitHandler<{
-    name: string
+    first_name: string
     email: string
     message: string
   }> = (data) => {
-    console.log(data)
+    sendMessage(data, () => formMethods.reset())
   }
 
   return (
@@ -85,9 +88,9 @@ const Contact = () => {
             className=' z-30 mt-10 flex flex-col gap-3'>
             <FormInput
               formMethods={formMethods}
-              inputName='name'
-              label='Full name'
-              placeHolder='Full Name'
+              inputName='first_name'
+              label='First name'
+              placeHolder='First Name'
               type='text'
               className=' mb-3 h-10 border rounded-lg px-5 py-1 flex items-center  z-30'
               errorClass=' mb-3 h-10 border border-[red] rounded-lg px-5 py-1 flex items-center  z-30'
@@ -114,8 +117,9 @@ const Contact = () => {
             />
             <button
               type='submit'
+              disabled={loading}
               className=' mx-auto lg:mx-0 mt-8 bg-gradient-to-r from-tertiary-500  to-primary-500 via-secondary-500 py-2 md:py-2 px-2 rounded-sm outline-none w-28 text-white-100 text-lg '>
-              Submit
+              {loading ? 'Loading...' : 'Submit'}
             </button>
           </form>
         </div>
